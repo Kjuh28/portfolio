@@ -4,7 +4,7 @@ import { Profile } from "./Profile";
 
 export function Home(){
     return(
-        <div className="text-white bg-black h-full w-screen">
+        <div className="text-white bg-black h-full w-full">
             <Navbar />
             <Profile />
             <Abilities />
