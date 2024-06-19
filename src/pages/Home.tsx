@@ -1,6 +1,7 @@
 import { Navbar } from "../layout/Navbar";
 import { Abilities } from "./Abilities";
 import { Profile } from "./Profile";
+import { Projects } from "./Projects";
 
 export function Home(){
     return(
@@ -8,6 +9,7 @@ export function Home(){
             <Navbar />
             <Profile />
             <Abilities />
+            <Projects />
         </div>
     )
 }
