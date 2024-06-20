@@ -3,7 +3,7 @@
         {
             "id":"1",
             "name":"Primeiro Projeto",
-            "description":"",
+            "description":"A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.",
             "link_git":"https://",
             "deploy":""
         },
@@ -17,7 +17,7 @@
         {
             "id":"3",
             "name":"Primeiro Projeto",
-            "description":"",
+            "description":"A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.",
             "link_git":"https://",
             "deploy":""
         },

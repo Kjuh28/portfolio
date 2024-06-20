@@ -23,6 +23,7 @@ export function Projects(){
             <div className="w-full">
                 { project.length > 0 && project.map((projectData) =>
                     <Project 
+                        key={projectData.id}
                         id={projectData.id}
                         name={projectData.name}
                         description={projectData.description}
