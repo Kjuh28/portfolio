@@ -27,6 +27,7 @@ export function Projects(){
                         id={projectData.id}
                         name={projectData.name}
                         description={projectData.description}
+                        img={projectData.img}
                     />
                 )  
                 }
