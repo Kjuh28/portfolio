@@ -1,4 +1,4 @@
-export function Project({id, name, description, img}){
+export function Project({id, name, description, img, git}){
     return(
         <div id={id} className='p-8 mb-8 border border-dashed rounded-xl text-center place-items-center'>
             <div className={(id % 2 == 0 ? 'sm:flex sm:justify-between max-h-96 gap-8' : 'sm:flex sm:flex-row-reverse sm:justify-between max-h-96 gap-8')}>

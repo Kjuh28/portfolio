@@ -1,13 +1,6 @@
 export function Button({txt}){
-
-    const buttonColors = {
-        primary:'border rounded font-bold',
-        danger:'orange_800',
-        neutral:'blue_g_500'
-    }    
-
     return(
-        <button className={buttonColors.danger}>
+        <button className="bg-none text-orange_400 border rounded-xl pr-4 pl-4 p-2 font-bold hover:bg-orange_600 hover:text-black">
             {txt}
         </button>
     )
