@@ -28,6 +28,7 @@ export function Projects(){
                         name={projectData.name}
                         description={projectData.description}
                         img={projectData.img}
+                        git={projectData.git}
                     />
                 )  
                 }
