@@ -6,8 +6,8 @@ export function Abilities(){
     return(
         <section className="p-8 sm:mx-32 mx-auto">
             <h1 className=" text-3xl sm:text-5xl font-bold text-center m-10">Habilidades</h1>
-            <ul className="mx-auto sm:text-6xl text-4xl pt-20 pb-20 md:grid md:grid-rows-2 md:grid-flow-col gap-16 flex flex-wrap sm:justify-between justify-around text-orange_400">
-                <li><FaHtml5 /></li>
+            <ul className="mx-auto text-orange_400 flex flex-wrap justify-center pt-20 pb-20 sm:text-6xl text-5xl md:grid grid-rows-2 md:grid-flow-col md:grid sm:gap-16 gap-32 sm:justify-between ">
+                <li className="hover:text-orange_600"><FaHtml5 /></li>
                 <li><FaCss3 /></li>
                 <li><FaJs /></li>
                 <li><FaReact /></li>
