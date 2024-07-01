@@ -1,6 +1,7 @@
 import { Navbar } from "../layout/Navbar";
 import { Abilities } from "./Abilities";
 import { About } from "./About";
+import { Contact } from "./Contact";
 import { Profile } from "./Profile";
 import { Projects } from "./Projects";
 
@@ -12,6 +13,7 @@ export function Home(){
             <About />
             <Abilities />
             <Projects />
+            <Contact />
         </div>
     )
 }
