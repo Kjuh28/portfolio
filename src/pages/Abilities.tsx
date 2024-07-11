@@ -1,17 +1,8 @@
 import { FaHtml5, FaCss3, FaJs, FaReact } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill, RiBootstrapFill  } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
-import { useState } from "react";
 
 export function Abilities(){
-
-    // const[activeLink, setActiveLink] = useState(false)
-
-    // function iconClick(){
-    //     setActiveLink(!activeLink)
-    //`${(activeLink == true) ? 'opacity-100' : 'opacity-0'} text-xl text-center transition-opacity ease-in-out border-b-2`
-    // }
-
     return(
         <section className="p-8 sm:mx-32 mx-auto">
             <h1 className=" text-3xl sm:text-5xl font-bold text-center m-10">Habilidades</h1>
