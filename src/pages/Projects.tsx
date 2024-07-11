@@ -1,9 +1,9 @@
-import { Project } from "../components/Project";
+import { Project, projectProps } from "../components/Project";
 import { useState, useEffect } from "react";
 
 export function Projects(){
 
-    const[project, setProject] = useState([])
+    const[project, setProject] = useState<projectProps[]>([])
 
     useEffect(() =>{
         fetch('http://localhost:5000/projects', {
