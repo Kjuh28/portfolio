@@ -13,7 +13,7 @@ export function Project({id, name, description, img, git}:projectProps){
         <div id={id} className='p-8 mb-8 border border-dashed border-orange_200 rounded-xl text-center place-items-center'>
             <div className={(Number(id) % 2 == 0 ? 'sm:flex sm:justify-between xl:max-h-96 gap-8' : 'sm:flex sm:flex-row-reverse xl:justify-between  gap-8')}>
                 <div className="sm:max-w-xl w-full">
-                    <img className="w-full h-full object-cover object-center rounded-xl hover:scale-110 transition-transform" src={img}/>
+                    <img className="w-full h-full object-cover object-center rounded-xl hover:scale-110 transition-transform" src={img} alt="teste"/>
                 </div>
                 <div className="sm:w-full max-w-xl">
                     <h1 className="font-bold text-3xl sm:text-4xl w-full text-orange_400 pb-8">{name}</h1>
