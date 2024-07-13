@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 export function Projects(){
 
     const[project, setProject] = useState<projectProps[]>([])
+    // const baseUrl = import.meta.env.BASE_URL
 
     useEffect(() =>{
-        fetch('https://github.com/Kjuh28/portfolio_db/blob/main/db.json', {
+        fetch(`https://portifolio-4hmpgjj2m-kerleys-projects-d76691af.vercel.app/`, {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -14,8 +15,9 @@ export function Projects(){
         }).then((resp) => resp.json())
         .then((data) => {
             setProject(data)
+            console.log(data)
         }).catch((err) => console.log(err))
-    })
+    }, [])
 
     return(
         <section className="p-8 sm:mx-32 mx-auto">
