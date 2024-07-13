@@ -6,7 +6,7 @@ export function Projects(){
     const[project, setProject] = useState<projectProps[]>([])
 
     useEffect(() =>{
-        fetch('http://localhost:5000/projects', {
+        fetch('https://github.com/Kjuh28/portfolio_db/blob/main/db.json', {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
