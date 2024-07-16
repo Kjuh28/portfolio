@@ -5,9 +5,10 @@ export function Projects(){
 
     const[project, setProject] = useState<projectProps[]>([])
     // const baseUrl = import.meta.env.BASE_URL
+    // https://portifolio-4hmpgjj2m-kerleys-projects-d76691af.vercel.app/
 
     useEffect(() =>{
-        fetch(`https://portifolio-4hmpgjj2m-kerleys-projects-d76691af.vercel.app/`, {
+        fetch(`http://localhost:5000/projects`, {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
