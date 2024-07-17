@@ -1,13 +1,19 @@
 import { Project, projectProps } from "../components/Project";
 import { useState, useEffect } from "react";
 
+
+
+
+
+
 export function Projects(){
 
     const[project, setProject] = useState<projectProps[]>([])
     // const baseUrl = import.meta.env.BASE_URL
+    // https://portifolio-4hmpgjj2m-kerleys-projects-d76691af.vercel.app/
 
     useEffect(() =>{
-        fetch(`https://portifolio-4hmpgjj2m-kerleys-projects-d76691af.vercel.app/`, {
+        fetch(`https://portfolio-db-nine.vercel.app/api/projects`, {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
