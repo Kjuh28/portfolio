@@ -9,7 +9,7 @@ export function Profile(){
                     <footer className="pt-8"><a href="#"><Button tittle='Download CV' /> </a></footer>
                 </div>
                 <div className="max-w-xl w-full flex justify-center">
-                    <img src="https://github.com/Kjuh28/portfolio/tree/main/src/assets/avatar500.png" className="" ></img>
+                    <img src="https://raw.githubusercontent.com/Kjuh28/portfolio/main/src/assets/avatar500.png" className="" ></img>
                 </div>
             </div>   
         </section>
