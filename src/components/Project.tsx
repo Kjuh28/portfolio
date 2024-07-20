@@ -6,12 +6,13 @@ export interface projectProps{
     description: string,
     img: string,
     git: string,
+    index: string
 }
 
-export function Project({id, name, description, img, git}:projectProps){
+export function Project({id, name, description, img, git, index}:projectProps){
     return(
         <div id={id} className='p-8 mb-8 border border-dashed border-orange_200 rounded-xl text-center place-items-center'>
-            <div className={(Number(id) % 2 == 0 ? 'sm:flex sm:justify-between xl:max-h-96 gap-8' : 'sm:flex sm:flex-row-reverse xl:justify-between  gap-8')}>
+            <div className={(Number(index) % 2 == 0 ? 'sm:flex sm:justify-between xl:max-h-96 gap-8' : 'sm:flex sm:flex-row-reverse xl:justify-between  gap-8')}>
                 <div className="sm:max-w-xl w-full">
                     <img className="w-full h-full object-cover object-center rounded-xl hover:scale-110 transition-transform" src={img}/>
                 </div>

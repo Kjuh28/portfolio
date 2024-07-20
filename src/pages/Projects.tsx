@@ -35,6 +35,7 @@ export function Projects(){
                         description={projectData.description}
                         img={projectData.img}
                         git={projectData.git}
+                        index={projectData.index}
                     />
                 )  
                 }
