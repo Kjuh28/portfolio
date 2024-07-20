@@ -17,7 +17,7 @@ export function Project({id, name, description, img, git, index}:projectProps){
                     <img className="w-full h-full object-cover object-center rounded-xl hover:scale-110 transition-transform" src={img}/>
                 </div>
                 <div className="sm:w-full max-w-xl">
-                    <h1 className="font-bold text-3xl sm:text-4xl w-full text-orange_400 pb-8">{name}</h1>
+                    <h1 className="font-bold text-3xl sm:text-4xl w-full text-orange_400 pb-8 pt-8">{name}</h1>
                     <p className="text-xl sm:text-2xl line-clamp-3 sm:line-clamp-none">{description}</p>
                     <footer className="pt-8">
                         <a href={git} target="_blank">{<Button tittle="Repositório" />}</a>

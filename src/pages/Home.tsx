@@ -7,7 +7,7 @@ import { Projects } from "./Projects";
 
 export function Home(){
     return(
-        <div className="text-white bg-black h-full w-full">
+        <div className="text-white bg-black h-full w-full container mx-auto">
             <Navbar />
             <Profile />
             <About />
@@ -15,5 +15,7 @@ export function Home(){
             <Projects />
             <Contact />
         </div>
+
+        
     )
 }
