@@ -8,8 +8,6 @@ export interface countProps{
 
 export function Abilities(){
     const [ability, setAbility] = useState<abilityProps[]>([])
-    const [openCount, setOpenCount] = useState(0)
-    const countRef = useRef()
 
     useEffect(() => {
         fetch('https://portfolio-db-nine.vercel.app/api/abilities', {
@@ -23,10 +21,7 @@ export function Abilities(){
         })
         .catch((err) => console.log(err))
     }, [])
-    
-    useEffect(() =>{
-        countRef.current = openCount;
-    }, [openCount])
+
 
     return(
         <section className="p-8 sm:mx-32 mx-auto max-w-8xl">
