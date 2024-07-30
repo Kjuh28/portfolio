@@ -1,10 +1,5 @@
 import { Collapse, abilityProps} from "../components/Collapse";
-import { useState, useEffect, useRef} from "react";
-
-export interface countProps{
-    openCount: number,
-    countRef: number
-}
+import { useState, useEffect} from "react";
 
 export function Abilities(){
     const [ability, setAbility] = useState<abilityProps[]>([])
