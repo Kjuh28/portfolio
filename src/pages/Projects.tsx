@@ -11,7 +11,7 @@ export function Projects(){
     const[project, setProject] = useState<projectProps[]>([])
 
     useEffect(() =>{
-        fetch(`https://portfolio-db-nine.vercel.app/api/projects`, {
+        fetch(`https://portfolio-db-q8dv.onrender.com/api/projects`, {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
