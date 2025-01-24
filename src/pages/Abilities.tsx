@@ -4,19 +4,22 @@ import { useState, useEffect} from "react";
 export function Abilities(){
     const [ability, setAbility] = useState<AbilityProps[]>([])
 
-    useEffect(() => {
-        fetch('https://portfolio-db-q8dv.onrender.com/api/abilities', {
-            method:'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        }).then((resp) => resp.json())
-        .then((data) => {
-            setAbility(data)
-        })
-        .catch((err) => console.log(err))
-    }, [])
-
+    try {
+        useEffect(() => {
+            fetch('https://portfolio-db-q8dv.onrender.com/api/abilities', {
+                method:'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }).then((resp) => resp.json())
+            .then((data) => {
+                setAbility(data)
+            })
+            .catch((err) => console.log(err))
+        }, [])
+    } catch (error) {
+        console.error(error)
+    }
 
     return(
         <section className="p-8 sm:mx-32 mx-auto max-w-8xl">
@@ -27,7 +30,9 @@ export function Abilities(){
                         {
                             ability.length > 0 && ability.map((abilityData) => 
                             abilityData.icon_type == 2 &&
-                            <Collapse 
+                            <Collapse
+                                key={abilityData.id}
+                                id={abilityData.id} 
                                 title={abilityData.title}
                                 icon_link={abilityData.icon_link}
                                 description ={abilityData.description}
@@ -42,7 +47,9 @@ export function Abilities(){
                         {
                             ability.length > 0 && ability.map((abilityData) => 
                             abilityData.icon_type == 1 &&
-                            <Collapse 
+                            <Collapse
+                                key={abilityData.id}
+                                id={abilityData.id} 
                                 title={abilityData.title}
                                 icon_link={abilityData.icon_link}
                                 description ={abilityData.description}
