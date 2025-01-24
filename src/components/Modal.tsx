@@ -16,7 +16,7 @@ export function Modal({title, description, handleOpenComponents, openComponents}
 
     return(
         <div>
-            <Dialog className='bg-black h-dvh sm:h-auto flex items-center p-4 sm:hidden'  open={openComponents} handler={() => handleOpenComponents}>
+            <Dialog className='bg-black h-dvh sm:h-auto flex items-center p-4 ' open={openComponents} handler={() => handleOpenComponents}>
                 <div className='text-white border border-orange_400 border-dashed rounded-xl w-xl max-w-xl justify-center text-center mx-auto'>
                     <DialogHeader className='justify-center'>
                         {title}
