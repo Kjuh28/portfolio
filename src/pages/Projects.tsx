@@ -31,10 +31,11 @@ export function Projects(){
                     <Project 
                         key={projectData.id}
                         id={projectData.id}
-                        name={projectData.name}
+                        title={projectData.title}
                         description={projectData.description}
-                        img={projectData.img}
-                        git={projectData.git}
+                        image={projectData.image}
+                        git_link={projectData.git_link}
+                        page_link={projectData.page_link}
                         index={projectData.index}
                     />
                 )  
