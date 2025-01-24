@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {
     Dialog,
     DialogHeader,
@@ -6,25 +5,29 @@ import {
     DialogFooter,
 } from "@material-tailwind/react"
 import { Button } from './Button'
+import { AbilityProps } from './Collapse'
 
+interface ModalProps extends AbilityProps{
+    handleOpenComponents: () => void,
+    openComponents: boolean
+}
 
-export function Modal(){
-    const [open, setOpen] = useState(false)
-    const handleOpen = () => setOpen(!open)
-    
+export function Modal({title, description, handleOpenComponents, openComponents}:ModalProps){
+
     return(
         <div>
-            <button onClick={handleOpen}><a>HTML</a></button>
-            <Dialog className='text-white border border-orange_400 max-w-sm grid justify-center text-center mx-auto' open={open} handler={handleOpen}>
-                <DialogHeader className='justify-center'>
-                    Aqui vai o Header
-                </DialogHeader>
-                <DialogBody>
-                    <p>Aqui vai algum texto sobre</p>
-                </DialogBody>
-                <DialogFooter className='justify-center'>
-                    <a onClick={handleOpen}><Button tittle='Sair'/></a>
-                </DialogFooter>
+            <Dialog className='bg-black h-dvh sm:h-auto flex items-center p-4 sm:hidden'  open={openComponents} handler={() => handleOpenComponents}>
+                <div className='text-white border border-orange_400 border-dashed rounded-xl w-xl max-w-xl justify-center text-center mx-auto'>
+                    <DialogHeader className='justify-center'>
+                        {title}
+                    </DialogHeader>
+                    <DialogBody>
+                        <p>{description}</p>
+                    </DialogBody>
+                    <DialogFooter className='justify-center'>
+                        <a onClick={handleOpenComponents}><Button tittle='Sair'/></a>
+                    </DialogFooter>
+                </div>
             </Dialog>
         </div>
             
