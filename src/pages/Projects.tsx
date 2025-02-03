@@ -7,7 +7,7 @@ export function Projects(){
 
     try {
         useEffect(() =>{
-            fetch(`https://portfolio-isfuat2tx-kerleys-projects-d76691af.vercel.app/api/projects`, {
+            fetch(`https://portfolio-llh2xmary-kerleys-projects-d76691af.vercel.app/api/projects`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',
