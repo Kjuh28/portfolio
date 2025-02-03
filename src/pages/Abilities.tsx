@@ -6,7 +6,7 @@ export function Abilities(){
 
     try {
         useEffect(() => {
-            fetch('https://portfolio-llh2xmary-kerleys-projects-d76691af.vercel.app/api/abilities', {
+            fetch('https://portfolio-4c6vl7i7x-kerleys-projects-d76691af.vercel.app/api/abilities', {
                 method:'GET',
                 headers: {
                     'Content-Type': 'application/json'
