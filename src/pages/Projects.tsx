@@ -11,7 +11,7 @@ export function Projects(){
     const[project, setProject] = useState<projectProps[]>([])
 
     useEffect(() =>{
-        fetch(`https://portfolio-db-nine.vercel.app/api/projects`, {
+        fetch(`https://portfolio-isfuat2tx-kerleys-projects-d76691af.vercel.app/api/projects`, {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
