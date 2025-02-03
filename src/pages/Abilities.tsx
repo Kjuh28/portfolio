@@ -6,7 +6,7 @@ export function Abilities(){
 
     try {
         useEffect(() => {
-            fetch('https://portfolio-db-q8dv.onrender.com/api/abilities', {
+            fetch('https://portfolio-isfuat2tx-kerleys-projects-d76691af.vercel.app/api/abilities', {
                 method:'GET',
                 headers: {
                     'Content-Type': 'application/json'
