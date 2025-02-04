@@ -5,9 +5,8 @@ export function Projects(){
 
     const[project, setProject] = useState<projectProps[]>([])
 
-    try {
         useEffect(() =>{
-            fetch(`https://portfolio-llh2xmary-kerleys-projects-d76691af.vercel.app/api/projects`, {
+            fetch(`https://portfolio-lamqdlvsz-kerleys-projects-d76691af.vercel.app/api/projects`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',
@@ -18,11 +17,7 @@ export function Projects(){
                 console.log(data)
             }).catch((err) => console.log(err))
         }, [])
-    
-    } catch (error) {
-        console.error(error)
-    }
-    
+
     return(
         <section className="p-8 sm:mx-32 mx-auto">
             <h1 className=" text-3xl sm:text-5xl font-bold text-center m-10">Projetos</h1>

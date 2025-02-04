@@ -4,9 +4,8 @@ import { useState, useEffect} from "react";
 export function Abilities(){
     const [ability, setAbility] = useState<AbilityProps[]>([])
 
-    try {
         useEffect(() => {
-            fetch('https://portfolio-llh2xmary-kerleys-projects-d76691af.vercel.app/api/abilities', {
+            fetch('https://portfolio-lamqdlvsz-kerleys-projects-d76691af.vercel.app/api/abilities', {
                 method:'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -17,9 +16,6 @@ export function Abilities(){
             })
             .catch((err) => console.log(err))
         }, [])
-    } catch (error) {
-        console.error(error)
-    }
 
     return(
         <section className="p-8 sm:mx-32 mx-auto max-w-8xl">
