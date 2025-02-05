@@ -5,10 +5,15 @@ export function Abilities(){
     const [ability, setAbility] = useState<AbilityProps[]>([])
 
         useEffect(() => {
-            fetch('https://portfolio-lamqdlvsz-kerleys-projects-d76691af.vercel.app/api/abilities', {
+            fetch('https://portfolio-db-git-main-kerleys-projects-d76691af.vercel.app/api/abilities', {
                 method:'GET',
+                mode:"cors",
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS,DELETE",
+                    "Access-Control-Max-Age": "86400",
                 },
             }).then((resp) => resp.json())
             .then((data) => {
