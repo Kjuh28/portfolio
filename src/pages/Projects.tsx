@@ -4,19 +4,28 @@ import { useState, useEffect } from "react";
 export function Projects(){
 
     const[project, setProject] = useState<projectProps[]>([])
-
-        useEffect(() =>{
-            fetch(`https://portfolio-lamqdlvsz-kerleys-projects-d76691af.vercel.app/api/projects`, {
-                method:'GET',
-                headers:{
-                    'Content-Type':'application/json',
-                },
-            }).then((resp) => resp.json())
-            .then((data) => {
-                setProject(data)
-                console.log(data)
-            }).catch((err) => console.log(err))
-        }, [])
+        try {
+            useEffect(() =>{
+                fetch('https://portfolio-db-git-main-kerleys-projects-d76691af.vercel.app/api/projects', {
+                    method:'GET',
+                    mode:"cors",
+                    headers:{
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS,DELETE",
+                        "Access-Control-Max-Age": "86400",
+                    },
+                }).then((resp) => resp.json())
+                .then((data) => {
+                    setProject(data)
+                    console.log(data)
+                }).catch((err) => console.log(err))
+            }, [])
+        } catch (error) {
+            console.log('---------------------------')
+            console.log(error)
+        }
+        
 
     return(
         <section className="p-8 sm:mx-32 mx-auto">
