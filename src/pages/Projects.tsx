@@ -31,7 +31,7 @@ export function Projects(){
         <section className="p-8 sm:mx-32 mx-auto">
             <h1 className=" text-3xl sm:text-5xl font-bold text-center m-10">Projetos</h1>
             <div className="w-full">
-                { project.length > 0 && project.map((projectData) =>
+                { project.length > 0 &&  [...project].reverse().map((projectData) =>
                     <Project 
                         key={projectData.id}
                         id={projectData.id}
