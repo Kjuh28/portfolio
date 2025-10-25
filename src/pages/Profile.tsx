@@ -9,7 +9,7 @@ export function Profile(){
                     <footer className="pt-8"><a href="https://drive.google.com/file/d/16HzlUa9k7--z8w313gj4lE4xTkW6SOAq/view?usp=sharing" download target="_blank" rel="noopener"><Button tittle='Download CV' /> </a></footer>
                 </div>
                 <div className="max-w-xl w-full flex justify-center">
-                    <img src="https://raw.githubusercontent.com/Kjuh28/portfolio/main/src/assets/avatar500.png" className="" ></img>
+                    <img src="https://res.cloudinary.com/da7jlpqk8/image/upload/v1761427369/avatar500_iudne3.png" className="" ></img>
                 </div>
             </div>   
         </section>
