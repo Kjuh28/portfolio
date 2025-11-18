@@ -10,10 +10,11 @@ export interface projectProps{
     image: string,
     git_link: string,
     page_link: string,
-    index: string
+    index: string,
+    slides: string[]
 }
 
-export function Project({id, title, description, image, git_link, page_link, index}:projectProps){
+export function Project({id, title, description, image, git_link, page_link, index, slides}:projectProps){
     const[ openModalCard, setOpenModalCard ] = useState(false)
     
     const handleOpenModalCard = () => {
@@ -44,6 +45,7 @@ export function Project({id, title, description, image, git_link, page_link, ind
                                 image={image}
                                 git_link={git_link}
                                 page_link={page_link}
+                                slides={slides}
                             />}
                         </a>
                     </footer>
