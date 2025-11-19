@@ -11,10 +11,12 @@ export interface projectProps{
     git_link: string,
     page_link: string,
     index: string,
+    summary: string,
+    technologies: string[],
     slides: string[]
 }
 
-export function Project({id, title, description, image, git_link, page_link, index, slides}:projectProps){
+export function Project({id, title, description, image, git_link, page_link, index, summary, technologies, slides}:projectProps){
     const[ openModalCard, setOpenModalCard ] = useState(false)
     
     const handleOpenModalCard = () => {
@@ -28,7 +30,7 @@ export function Project({id, title, description, image, git_link, page_link, ind
                 </div>
                 <div className="sm:w-full max-w-xl">
                     <h1 className="font-bold text-3xl sm:text-4xl w-full text-orange_400 pb-8 pt-8">{title}</h1>
-                    <p className="text-xl sm:text-2xl line-clamp-3 sm:line-clamp-none">{description}</p>
+                    <p className="text-xl sm:text-2xl line-clamp-3 sm:line-clamp-none">{summary}</p>
                     <footer className="pt-8 sm:flex sm:justify-around">
                         <a className="grid p-4 sm:w-44" href={git_link} target="_blank" rel="noopener">{<Button tittle="Repositório" />}</a>
                         <a className="grid p-4 sm:w-44"  rel="noopener">
@@ -46,6 +48,8 @@ export function Project({id, title, description, image, git_link, page_link, ind
                                 git_link={git_link}
                                 page_link={page_link}
                                 slides={slides}
+                                technologies={technologies}
+                                summary={summary}
                             />}
                         </a>
                     </footer>
