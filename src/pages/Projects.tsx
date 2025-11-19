@@ -42,6 +42,8 @@ export function Projects(){
                         page_link={projectData.page_link}
                         index={projectData.index}
                         slides={projectData.slides}
+                        summary={projectData.summary}
+                        technologies={projectData.technologies}
                     />
                 )  
                 }
