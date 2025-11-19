@@ -41,6 +41,9 @@ export function Projects(){
                         git_link={projectData.git_link}
                         page_link={projectData.page_link}
                         index={projectData.index}
+                        slides={projectData.slides}
+                        summary={projectData.summary}
+                        technologies={projectData.technologies}
                     />
                 )  
                 }

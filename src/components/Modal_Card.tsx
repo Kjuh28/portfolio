@@ -14,27 +14,43 @@ interface ModalCardProps extends projectProps {
     title: string
 }
 
-export function ModalCard({handleOpenModalCard, openModalCard, title, description, image, git_link, page_link}: ModalCardProps){
+export function ModalCard({handleOpenModalCard, openModalCard, title, description, image, git_link, page_link, slides, technologies}: ModalCardProps){
 
     return(
-        <div>
-            <Dialog className='bg-black items-center h-dvh p-4' open={openModalCard} handler={() => handleOpenModalCard}>
+        <>
+            <Dialog className='bg-black items-center sm:w-full h-full p-4' open={openModalCard} handler={() => handleOpenModalCard}>
                 <div className='text-white border w-full border-orange_400 border-dashed rounded-xl justify-center text-center mx-auto'>
                     <DialogHeader className='justify-center text-orange_400 p-4'>
                         {title}
                     </DialogHeader>
                     <DialogBody>
-                        <div className="sm:flex sm:justify-between items-center gap-4">
-                            <div className="max-w-xl">{description}</div>
-                            <div className="max-w-2xl relative
-                            
-                            ">
-                                {<CarouselDefault
-                                    src1={image}
-                                    src2={image}
-                                    src3={image}
-                                />
+                        <div className="grid sm:flex sm:justify-around justify-center gap-4">
+                            <div className="sm:w-full justify-center ">
+                                {slides ? <CarouselDefault
+                                    src1={slides[0]}
+                                    src2={slides[1]}
+                                    src3={slides[2]}
+                                    src4={slides[3]}
+                                /> : <img src={image} alt={title} className="w-full sm:max-w-3xl h-auto rounded-lg"/>
                                 }
+                            </div>
+                            <div className="w-full line-clamp-none">
+                                <p>{description}</p>
+                                {technologies &&
+                                    <>
+                                        <h2 className="font-bold text-xl sm:text-2xl w-full text-orange_400 pb-8 pt-8">Técnologias Utilizadas</h2>
+                                        <ul className="flex gap-4 justify-center flex-wrap">
+                                            <li className="text-center inline-flex justify-center flex-wrap gap-4">
+                                                {
+                                                    technologies.map((tech, index) => (
+                                                        <img key={index} src={tech} alt={`Tecnologia ${index + 1}`} className="w-12 h-12 m-2"/>
+                                                    ))
+                                                }
+                                            </li>
+                                        </ul>
+                                    </>
+                                }
+                                
                             </div>
                         </div>
                     </DialogBody>
@@ -45,6 +61,6 @@ export function ModalCard({handleOpenModalCard, openModalCard, title, descriptio
                     </DialogFooter>
                 </div>
             </Dialog>
-        </div>
+        </>
     )
 }
