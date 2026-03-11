@@ -26,7 +26,7 @@ export function CarouselDefault({src1, src2, src3, src4}: CarouselProps){
     return (
         <div className="grid justify-center">
             <div className="sm:max-w-3xl">
-                <img src={currentSlide} alt="Carousel Slide" className="w-full sm:max-w-3xl rounded-lg border border-orange_400 border-dashed"/>
+                <img src={currentSlide} alt="Carousel Slide" className="w-full sm:max-w-3xl max-h-[420px] rounded-lg border border-orange_400 border-dashed"/>
             </div>
             <div className="flex justify-center">
                 {slideMap()}
