@@ -10,13 +10,13 @@ Este repositório contém o código-fonte do meu portfólio pessoal e hub de pro
 O portfólio foi projetado com foco em **performance, responsividade e escaneabilidade**. Em vez de utilizar soluções prontas ou construtores de sites visuais, optei por desenvolver a aplicação do zero utilizando tecnologias modernas do ecossistema JavaScript para garantir controle total sobre a renderização, SEO e experiência do usuário (UX).
 
 ## 🛠️ Stack Tecnológica Utilizada
-* **Core Framework:** React.js / Next.js (aproveitando os conceitos de renderização otimizada)
+* **Core Framework:** React.js (construído sobre o ecossistema ágil do Vite)
 * **Estilização:** Tailwind CSS (garantindo um design responsivo, utilitário e de carregamento leve)
 * **Linguagem:** TypeScript / JavaScript
 * **Deploy & Hospedagem:** Vercel
 
 ## ⚙️ Diferenciais Técnicos Aplicados
-* **Componentização Semântica:** Divisão clara e reaproveitável dos elementos da interface (Header, Tech Stack, Projects Core, Footer), facilitando a manutenção e legibilidade do código.
+* **Componentização Semântica:** Divisão clara e reaproveitável dos elementos da interface, facilitando a manutenção e legibilidade do código.
 * **Mobile-First & Responsividade:** Interface totalmente adaptada para dispositivos móveis, tablets e desktops através das diretivas utilitárias do Tailwind.
 * **SEO & Acessibilidade:** Uso de tags HTML5 semânticas para melhorar a indexação em motores de busca e garantir uma navegação estruturada.
 
@@ -28,17 +28,17 @@ Se desejar clonar o projeto para analisar a estrutura de pastas ou testar localm
 
 1. **Clone o repositório:**
 ```bash
-   git clone [https://github.com/Kjuh28/portfolio.git](https://github.com/Kjuh28/portfolio.git)
+   git clone https://github.com/Kjuh28/portfolio.git
 ```
 2. **Entre no diretório:**
 ```
   cd portfolio
 ```
-4. **Instale as dependências:**
+3. **Instale as dependências:**
 ```
   npm install
 ```
-6. **Inicie o servidor de desenvolvimento:**
+4. **Inicie o servidor de desenvolvimento:**
 ```
   npm run dev
 ```
